@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController,UITextFieldDelegate {
 
+    let model = Model(value: "initial value")
+    
+    
     @IBOutlet weak var mvcTextField: UITextField!
     @IBOutlet var mvpTextField: UITextField!
     @IBOutlet var mvvmmTextField: UITextField!
@@ -28,9 +31,20 @@ class ViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet var stackView: UIStackView!
     
+    var mvcObserver: NSObjectProtocol?
+    var presenter: ViewPresenter?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //mvc
+        mvcDidLoad()
+        
+        //mvp
+        mvpDidLoad()
+        
+
     }
     
     
@@ -40,9 +54,18 @@ class ViewController: UIViewController,UITextFieldDelegate {
 // ------------------------------------------  MVC  ------------------------------------------------
 
 extension ViewController {
+    func mvcDidLoad() {
+       //Initialize
+       mvcTextField.text = model.value;
+       //add observer
+       mvcObserver = NotificationCenter.default.addObserver(forName: Model.textDidChange, object: nil, queue: nil) { [mvcTextField] (note) in
+            mvcTextField?.text = note.userInfo?[Model.textKey] as? String
+        }
+    }
     
     @IBAction func mvcButtonPressed(){
         print("mvcButtonPressed")
+        model.value = mvcTextField.text ?? ""
         
     }
     
@@ -51,19 +74,68 @@ extension ViewController {
 
 
 // ------------------------------------------  MVP  ------------------------------------------------
-extension ViewController {
+
+protocol viewProtocol: class {
     
+    var textFieldValue: String {get set}
+}
+
+class ViewPresenter {
+    let model:Model
+    weak var view:viewProtocol?
+    let observer:NSObjectProtocol
+    
+    init(model:Model,view:viewProtocol) {
+        self.model = model
+        self.view = view
+        //Initialize
+        view.textFieldValue = model.value;
+        //add observer
+        observer = NotificationCenter.default.addObserver(forName: Model.textDidChange, object: nil, queue: nil) { [view] (note) in
+            view.textFieldValue = note.userInfo?[Model.textKey] as? String ?? ""
+        }
+    }
+    
+    func commit()  {
+        model.value = view?.textFieldValue ?? ""
+    }
+    
+}
+
+extension ViewController :viewProtocol {
+    
+    var textFieldValue: String {
+        get {
+            return mvpTextField.text ?? ""
+        }
+        set {
+            mvpTextField.text = newValue
+        }
+    }
+    
+    func mvpDidLoad() {
+        
+        presenter = ViewPresenter(model: model, view: self)
+        
+    }
+
     @IBAction func  mvpButtonPressed() {
+        presenter?.commit()
         print("mvpButtonPressed")
     }
     
 }
 
 
+
 // ------------------------------------------  Minimal MVVM ------------------------------------------------
+
+
 extension ViewController {
+    
     @IBAction func  mvvmmButtonPressed() {
         print("mvvmmButtonPressed")
+        
     }
 }
 
