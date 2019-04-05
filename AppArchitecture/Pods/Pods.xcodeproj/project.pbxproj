@@ -1,0 +1,927 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05039B5621D898A5AA14A649BAE2E487 /* Pods-AppArchitecture-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3312304966CC73BBDCDA5F44A4BE80DF /* Pods-AppArchitecture-dummy.m */; };
+		1CA3B6B4DA9EDD4451241B03BB3E23F6 /* Pods-AppArchitecture-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46426CB61EDA527BB42E351D694A8598 /* Pods-AppArchitecture-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E5293F281B36CA73DB0A165ED16777B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904838B4AFE774EFA7544473A9E9D977 /* Foundation.framework */; };
+		20044BB726CA8643534BD70911654F36 /* CwlUtils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AFE91F97C602C6966F4323B93279 /* CwlUtils-dummy.m */; };
+		2334FDC994A79C6568385389EA559633 /* CwlDeferredWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4AC40E4A7C408C453EB50D027AFD74 /* CwlDeferredWork.swift */; };
+		337F96A39E3B2144D30D0605FADD56B6 /* CwlUnanticipatedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF85DB99ED51D206B3EA08666B9BE3 /* CwlUnanticipatedError.swift */; };
+		45320F8DF26FE40AED2422058FE131B0 /* CwlSignalCocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D36BF347186642E2D0CDE2B9857EE3 /* CwlSignalCocoa.swift */; };
+		458E498E225223E73973E25957E3A22C /* CwlFrameAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B48DB835E4685EA1B9CB453BDCCD24E /* CwlFrameAddress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46E7A1521FF0FF559FB5BB2C53671237 /* CwlAddressInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9514F475A44B6751555DD5A3FAD12799 /* CwlAddressInfo.swift */; };
+		4EBAC26C77377CE38AE83B7FAAC4D103 /* CwlSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6B4E1734E9C4C7029CE16F6025758E /* CwlSignal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55B4A0CF7BB8571F14D32D20C07ADBCA /* CwlUtils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5C9994C9F268BB848271B131182943 /* CwlUtils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		562E843043AF22B0D544C8CBAFE4E83B /* CwlKeyValueObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA59241A6341D4189905F786F5B370 /* CwlKeyValueObserver.swift */; };
+		594B6A089368C96998FD3720DBFD45A2 /* CwlSignalReactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC574402F26CBA8E201B235A74D6B090 /* CwlSignalReactive.swift */; };
+		5CA350F3C6D8F71B51013BB956441CA0 /* CwlDeque.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32421D2FCB68AE12C416B8ECF436AD7 /* CwlDeque.swift */; };
+		5CE466368EA4B8EFF11CB05E38C602F5 /* CwlResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DCA1E8B1226B53DAFB3FC4EE336D38 /* CwlResult.swift */; };
+		656875C23D947E974D6417446F0628CC /* CwlFrameAddress.c in Sources */ = {isa = PBXBuildFile; fileRef = 594ED8943CD6B43E042437C2EB03B113 /* CwlFrameAddress.c */; };
+		71462E7DF281FDE287ED61BBCD745800 /* CwlSignal-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F7E93DB787444A5FF6D42DB5BAEE13ED /* CwlSignal-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7ACAC54DEE08F86E503622E83874463B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904838B4AFE774EFA7544473A9E9D977 /* Foundation.framework */; };
+		81BEB927C920811811367E9B9906A1B1 /* CwlFew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833607137DD868974B944A73FC6F07D9 /* CwlFew.swift */; };
+		89639C005C8978F96733699131825339 /* CwlSerializingContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822011C2730E3F8A9C360CAEACA31E03 /* CwlSerializingContext.swift */; };
+		8ACDA4A3B14AA70481132C8843F775FF /* CwlDispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA5F734410071D111F881D5D6D5B82 /* CwlDispatch.swift */; };
+		8F11116D264FF820FF2FD743705A8511 /* CwlScalarScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81244045853AA641A1FD4CF6448FA6 /* CwlScalarScanner.swift */; };
+		915B490EE6ABB597C62DE3B4F87B4EB8 /* CwlSignalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602096F3E524B86D06D7CA18305A5327 /* CwlSignalExtensions.swift */; };
+		92DF94C2823D67297F7B8B9B44D7FFA9 /* CwlTransformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFA0C0097EF99EAF3F78AD48D7B89FB /* CwlTransformations.swift */; };
+		95F34C4051AA2C497C7323A73B5DCEE7 /* CwlLifetime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD9A5CB5827F58F8B21FF11885819A /* CwlLifetime.swift */; };
+		A892B3AEB3FF1CD20D5CFED89F911FC1 /* CwlRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD2EC8962645AFE2FEC547CDDF7DE16 /* CwlRandom.swift */; };
+		ACE4B4CB345F79CF9FD2D9581DE2F40B /* CwlSignal-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41921C164AEC5C13D38ED862E44733 /* CwlSignal-dummy.m */; };
+		B317BE0614FE6DB252D2FD7F167E9D67 /* CwlCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4C0FE6FF69484B49A223680E9FAC66 /* CwlCollection.swift */; };
+		BBD9FD1C7502D3270F0497685F2B4F66 /* CwlUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B287C586ABCED69A13FA53B1934968E3 /* CwlUtils.framework */; };
+		C6501DC330D06C8727BB517342F86941 /* CwlDebugContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6919042248116D331C8543D2CA1C442 /* CwlDebugContext.swift */; };
+		D10E1D865FC583E34FBB1CA4536B49F6 /* CwlOnDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5548FB193DC8FCF4F81F1103565AFC7 /* CwlOnDelete.swift */; };
+		D20A525FCBC06180B9A35DC65554D2FC /* CwlSignalChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EC89F34CCBA68752F8DC1E394A026C /* CwlSignalChannel.swift */; };
+		D3447167A75B2759D0688B414E516EB5 /* CwlWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D59F2AA1D7D9F134FB642BF937CB56B /* CwlWrappers.swift */; };
+		D4DE1DF5179152FA0CB2A7363A285986 /* CwlExecutionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227DB400FCBFC7670873BB5439C7E921 /* CwlExecutionType.swift */; };
+		D50B2C5E340710579F5B07D429757C8D /* CwlStackFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18D5695F9E2F9015D936A201C5DFF5B /* CwlStackFrame.swift */; };
+		D824703480CD3BDA9218648AA9D23025 /* CwlCustomExecutionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F4C699457ABB2230D9816C70C6D07 /* CwlCustomExecutionContext.swift */; };
+		E166674C88158B4C1FFD4B0D0AF1277B /* CwlUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = BC51129558758A87BD21C21107FD1555 /* CwlUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E38B15A97572747279138E88E300BD9E /* CwlMutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4565D62C57C12AD4850793FEAACBA750 /* CwlMutex.swift */; };
+		EA0DE056CEDA0B7319181098A961FB3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904838B4AFE774EFA7544473A9E9D977 /* Foundation.framework */; };
+		EDE380022F28F1EE7F41064C8C8A5036 /* CwlSysctl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D69FF48EEC343E158CB366F59604426 /* CwlSysctl.swift */; };
+		EF50DBD177DC17E03BBF3D7DB5A4F1D5 /* CwlCaseNameCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A285C383937031A5C9E2BFC151DE6 /* CwlCaseNameCodable.swift */; };
+		F5A9D97A1565E66C5750056AD5FAA75E /* CwlExec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70700DA150AE8B6FA19C9C456660FA7 /* CwlExec.swift */; };
+		FF940B561DA2AE5F769EDB615E6D58A6 /* CwlSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4446D9CA71CED23FAFD5E150E43F5E4 /* CwlSignal.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		010BC726B6A03F5A6C39652EE153D9B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2F5124F997D6D80C2405EA337D6EE9F;
+			remoteInfo = CwlUtils;
+		};
+		4365D7C32B0816D7276BDA63F9456196 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E27EF2E8F0D7BA1CD93310CAB36A37E5;
+			remoteInfo = CwlSignal;
+		};
+		F9AAE7D4A1F21BFA479853AD2B514FA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2F5124F997D6D80C2405EA337D6EE9F;
+			remoteInfo = CwlUtils;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C1F4C699457ABB2230D9816C70C6D07 /* CwlCustomExecutionContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlCustomExecutionContext.swift; path = Sources/CwlUtils/CwlCustomExecutionContext.swift; sourceTree = "<group>"; };
+		10E14C17D709C3B613FF4037D9BA70B9 /* Pods-AppArchitecture-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AppArchitecture-frameworks.sh"; sourceTree = "<group>"; };
+		1A6B078CA7E5EFEB0E3A86D1E937BA13 /* Pods-AppArchitecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppArchitecture.debug.xcconfig"; sourceTree = "<group>"; };
+		1D2873FC9C691D01237D192BB1A57ED7 /* Pods_AppArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EBF85DB99ED51D206B3EA08666B9BE3 /* CwlUnanticipatedError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlUnanticipatedError.swift; path = Sources/CwlUtils/CwlUnanticipatedError.swift; sourceTree = "<group>"; };
+		1FBA59241A6341D4189905F786F5B370 /* CwlKeyValueObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlKeyValueObserver.swift; path = Sources/CwlUtils/CwlKeyValueObserver.swift; sourceTree = "<group>"; };
+		227DB400FCBFC7670873BB5439C7E921 /* CwlExecutionType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlExecutionType.swift; path = Sources/CwlUtils/CwlExecutionType.swift; sourceTree = "<group>"; };
+		2B48DB835E4685EA1B9CB453BDCCD24E /* CwlFrameAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlFrameAddress.h; path = Sources/CwlFrameAddress/include/CwlFrameAddress.h; sourceTree = "<group>"; };
+		3312304966CC73BBDCDA5F44A4BE80DF /* Pods-AppArchitecture-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AppArchitecture-dummy.m"; sourceTree = "<group>"; };
+		33AA5F734410071D111F881D5D6D5B82 /* CwlDispatch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlDispatch.swift; path = Sources/CwlUtils/CwlDispatch.swift; sourceTree = "<group>"; };
+		36EA2A75D2B83B59B48074BA74C68385 /* CwlUtils.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CwlUtils.modulemap; sourceTree = "<group>"; };
+		44A3764AFF86E71982CD09D035CCE5DF /* Pods-AppArchitecture.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AppArchitecture.modulemap"; sourceTree = "<group>"; };
+		4565D62C57C12AD4850793FEAACBA750 /* CwlMutex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlMutex.swift; path = Sources/CwlUtils/CwlMutex.swift; sourceTree = "<group>"; };
+		46426CB61EDA527BB42E351D694A8598 /* Pods-AppArchitecture-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AppArchitecture-umbrella.h"; sourceTree = "<group>"; };
+		46DCA1E8B1226B53DAFB3FC4EE336D38 /* CwlResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlResult.swift; path = Sources/CwlUtils/CwlResult.swift; sourceTree = "<group>"; };
+		48EB41571AC51F363D9AC93901D6526D /* Pods-AppArchitecture-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppArchitecture-acknowledgements.plist"; sourceTree = "<group>"; };
+		4C442633D062675B97BDC738D10B32AB /* CwlUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CwlUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C48AFE91F97C602C6966F4323B93279 /* CwlUtils-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CwlUtils-dummy.m"; sourceTree = "<group>"; };
+		4D41921C164AEC5C13D38ED862E44733 /* CwlSignal-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CwlSignal-dummy.m"; sourceTree = "<group>"; };
+		594ED8943CD6B43E042437C2EB03B113 /* CwlFrameAddress.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = CwlFrameAddress.c; path = Sources/CwlFrameAddress/CwlFrameAddress.c; sourceTree = "<group>"; };
+		5A5C9994C9F268BB848271B131182943 /* CwlUtils-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CwlUtils-umbrella.h"; sourceTree = "<group>"; };
+		5AD2EC8962645AFE2FEC547CDDF7DE16 /* CwlRandom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlRandom.swift; path = Sources/CwlUtils/CwlRandom.swift; sourceTree = "<group>"; };
+		602096F3E524B86D06D7CA18305A5327 /* CwlSignalExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlSignalExtensions.swift; path = Sources/CwlSignal/CwlSignalExtensions.swift; sourceTree = "<group>"; };
+		6725FEEDAEBFD7C422983E35D2B2C53B /* CwlUtils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CwlUtils-prefix.pch"; sourceTree = "<group>"; };
+		6BE3265B203323E8594780058C199FC7 /* CwlSignal-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CwlSignal-Info.plist"; sourceTree = "<group>"; };
+		6D38C1FD1B7AFF7053C93B076206B196 /* CwlSignal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CwlSignal.xcconfig; sourceTree = "<group>"; };
+		7102D9D5D18E2AC58DDCC4A119CF0564 /* CwlUtils-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CwlUtils-Info.plist"; sourceTree = "<group>"; };
+		7583DACEFADF11B9BC9150710B150F42 /* CwlSignal.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CwlSignal.modulemap; sourceTree = "<group>"; };
+		7D59F2AA1D7D9F134FB642BF937CB56B /* CwlWrappers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlWrappers.swift; path = Sources/CwlUtils/CwlWrappers.swift; sourceTree = "<group>"; };
+		7D69FF48EEC343E158CB366F59604426 /* CwlSysctl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlSysctl.swift; path = Sources/CwlUtils/CwlSysctl.swift; sourceTree = "<group>"; };
+		822011C2730E3F8A9C360CAEACA31E03 /* CwlSerializingContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlSerializingContext.swift; path = Sources/CwlUtils/CwlSerializingContext.swift; sourceTree = "<group>"; };
+		833607137DD868974B944A73FC6F07D9 /* CwlFew.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlFew.swift; path = Sources/CwlUtils/CwlFew.swift; sourceTree = "<group>"; };
+		86086ECE42C119F1A4644E01B6F93471 /* Pods-AppArchitecture-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppArchitecture-Info.plist"; sourceTree = "<group>"; };
+		903A285C383937031A5C9E2BFC151DE6 /* CwlCaseNameCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlCaseNameCodable.swift; path = Sources/CwlUtils/CwlCaseNameCodable.swift; sourceTree = "<group>"; };
+		904838B4AFE774EFA7544473A9E9D977 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9514F475A44B6751555DD5A3FAD12799 /* CwlAddressInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlAddressInfo.swift; path = Sources/CwlUtils/CwlAddressInfo.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ADDAE796CB997B309C877D5ADA032BD7 /* CwlSignal-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CwlSignal-prefix.pch"; sourceTree = "<group>"; };
+		B287C586ABCED69A13FA53B1934968E3 /* CwlUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CwlUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4446D9CA71CED23FAFD5E150E43F5E4 /* CwlSignal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlSignal.swift; path = Sources/CwlSignal/CwlSignal.swift; sourceTree = "<group>"; };
+		BC51129558758A87BD21C21107FD1555 /* CwlUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlUtils.h; path = Sources/CwlUtils/CwlUtils.h; sourceTree = "<group>"; };
+		C0EC89F34CCBA68752F8DC1E394A026C /* CwlSignalChannel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlSignalChannel.swift; path = Sources/CwlSignal/CwlSignalChannel.swift; sourceTree = "<group>"; };
+		C4FF7E6FC480382663A188F52F6C598A /* CwlUtils.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CwlUtils.xcconfig; sourceTree = "<group>"; };
+		C6919042248116D331C8543D2CA1C442 /* CwlDebugContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlDebugContext.swift; path = Sources/CwlUtils/CwlDebugContext.swift; sourceTree = "<group>"; };
+		CECD9A5CB5827F58F8B21FF11885819A /* CwlLifetime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlLifetime.swift; path = Sources/CwlUtils/CwlLifetime.swift; sourceTree = "<group>"; };
+		CEFA0C0097EF99EAF3F78AD48D7B89FB /* CwlTransformations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlTransformations.swift; path = Sources/CwlUtils/CwlTransformations.swift; sourceTree = "<group>"; };
+		D43D93047594451C4D4421408B2DC757 /* Pods-AppArchitecture-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppArchitecture-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DE4C0FE6FF69484B49A223680E9FAC66 /* CwlCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlCollection.swift; path = Sources/CwlUtils/CwlCollection.swift; sourceTree = "<group>"; };
+		E5548FB193DC8FCF4F81F1103565AFC7 /* CwlOnDelete.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlOnDelete.swift; path = Sources/CwlUtils/CwlOnDelete.swift; sourceTree = "<group>"; };
+		E70700DA150AE8B6FA19C9C456660FA7 /* CwlExec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlExec.swift; path = Sources/CwlUtils/CwlExec.swift; sourceTree = "<group>"; };
+		E8306256C65E76F9C4275213D8B11251 /* CwlSignal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CwlSignal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC81244045853AA641A1FD4CF6448FA6 /* CwlScalarScanner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlScalarScanner.swift; path = Sources/CwlUtils/CwlScalarScanner.swift; sourceTree = "<group>"; };
+		F18D5695F9E2F9015D936A201C5DFF5B /* CwlStackFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlStackFrame.swift; path = Sources/CwlUtils/CwlStackFrame.swift; sourceTree = "<group>"; };
+		F32421D2FCB68AE12C416B8ECF436AD7 /* CwlDeque.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlDeque.swift; path = Sources/CwlUtils/CwlDeque.swift; sourceTree = "<group>"; };
+		F7E93DB787444A5FF6D42DB5BAEE13ED /* CwlSignal-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CwlSignal-umbrella.h"; sourceTree = "<group>"; };
+		F82A3140F12F937F8CDCFA212BAF8891 /* Pods-AppArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppArchitecture.release.xcconfig"; sourceTree = "<group>"; };
+		F8D36BF347186642E2D0CDE2B9857EE3 /* CwlSignalCocoa.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlSignalCocoa.swift; path = Sources/CwlSignal/CwlSignalCocoa.swift; sourceTree = "<group>"; };
+		FC574402F26CBA8E201B235A74D6B090 /* CwlSignalReactive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlSignalReactive.swift; path = Sources/CwlSignal/CwlSignalReactive.swift; sourceTree = "<group>"; };
+		FE4AC40E4A7C408C453EB50D027AFD74 /* CwlDeferredWork.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlDeferredWork.swift; path = Sources/CwlUtils/CwlDeferredWork.swift; sourceTree = "<group>"; };
+		FE6B4E1734E9C4C7029CE16F6025758E /* CwlSignal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlSignal.h; path = Sources/CwlSignal/CwlSignal.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20DEB4F0BC5A0D6165CB174B7D4C8679 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E5293F281B36CA73DB0A165ED16777B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		934CD7AA3BB35375662284C58553D3B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBD9FD1C7502D3270F0497685F2B4F66 /* CwlUtils.framework in Frameworks */,
+				EA0DE056CEDA0B7319181098A961FB3E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D738C18773D2F7C7A770A87F78742215 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ACAC54DEE08F86E503622E83874463B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		392C6A55B3BFD6189DDEF1B7C1F56BB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E8306256C65E76F9C4275213D8B11251 /* CwlSignal.framework */,
+				4C442633D062675B97BDC738D10B32AB /* CwlUtils.framework */,
+				1D2873FC9C691D01237D192BB1A57ED7 /* Pods_AppArchitecture.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6FEB6D1C0BE9AA0789DDAC8C739F82EC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E97670A14DBFB1F2327613FD29AB1DB5 /* Pods-AppArchitecture */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		95CDF2091162AE77D745DE5C2DC89B2F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				36EA2A75D2B83B59B48074BA74C68385 /* CwlUtils.modulemap */,
+				C4FF7E6FC480382663A188F52F6C598A /* CwlUtils.xcconfig */,
+				4C48AFE91F97C602C6966F4323B93279 /* CwlUtils-dummy.m */,
+				7102D9D5D18E2AC58DDCC4A119CF0564 /* CwlUtils-Info.plist */,
+				6725FEEDAEBFD7C422983E35D2B2C53B /* CwlUtils-prefix.pch */,
+				5A5C9994C9F268BB848271B131182943 /* CwlUtils-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CwlUtils";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				DDC7DABA10E4412F2F52A63B0FCD6010 /* Frameworks */,
+				D39734B25C6D759807FA1F8935F5E638 /* Pods */,
+				392C6A55B3BFD6189DDEF1B7C1F56BB0 /* Products */,
+				6FEB6D1C0BE9AA0789DDAC8C739F82EC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D39734B25C6D759807FA1F8935F5E638 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DEB73A8C4544073EC00C9F7543593367 /* CwlSignal */,
+				FE94C260F75B364F166B71B8C449770E /* CwlUtils */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DDC7DABA10E4412F2F52A63B0FCD6010 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B287C586ABCED69A13FA53B1934968E3 /* CwlUtils.framework */,
+				EF4883AA3E6C11F97F94DA5B6A9A6BA9 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DEB73A8C4544073EC00C9F7543593367 /* CwlSignal */ = {
+			isa = PBXGroup;
+			children = (
+				FE6B4E1734E9C4C7029CE16F6025758E /* CwlSignal.h */,
+				B4446D9CA71CED23FAFD5E150E43F5E4 /* CwlSignal.swift */,
+				C0EC89F34CCBA68752F8DC1E394A026C /* CwlSignalChannel.swift */,
+				F8D36BF347186642E2D0CDE2B9857EE3 /* CwlSignalCocoa.swift */,
+				602096F3E524B86D06D7CA18305A5327 /* CwlSignalExtensions.swift */,
+				FC574402F26CBA8E201B235A74D6B090 /* CwlSignalReactive.swift */,
+				E486DE958720B407D02CCE21FF9BB504 /* Support Files */,
+			);
+			path = CwlSignal;
+			sourceTree = "<group>";
+		};
+		E486DE958720B407D02CCE21FF9BB504 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7583DACEFADF11B9BC9150710B150F42 /* CwlSignal.modulemap */,
+				6D38C1FD1B7AFF7053C93B076206B196 /* CwlSignal.xcconfig */,
+				4D41921C164AEC5C13D38ED862E44733 /* CwlSignal-dummy.m */,
+				6BE3265B203323E8594780058C199FC7 /* CwlSignal-Info.plist */,
+				ADDAE796CB997B309C877D5ADA032BD7 /* CwlSignal-prefix.pch */,
+				F7E93DB787444A5FF6D42DB5BAEE13ED /* CwlSignal-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CwlSignal";
+			sourceTree = "<group>";
+		};
+		E97670A14DBFB1F2327613FD29AB1DB5 /* Pods-AppArchitecture */ = {
+			isa = PBXGroup;
+			children = (
+				44A3764AFF86E71982CD09D035CCE5DF /* Pods-AppArchitecture.modulemap */,
+				D43D93047594451C4D4421408B2DC757 /* Pods-AppArchitecture-acknowledgements.markdown */,
+				48EB41571AC51F363D9AC93901D6526D /* Pods-AppArchitecture-acknowledgements.plist */,
+				3312304966CC73BBDCDA5F44A4BE80DF /* Pods-AppArchitecture-dummy.m */,
+				10E14C17D709C3B613FF4037D9BA70B9 /* Pods-AppArchitecture-frameworks.sh */,
+				86086ECE42C119F1A4644E01B6F93471 /* Pods-AppArchitecture-Info.plist */,
+				46426CB61EDA527BB42E351D694A8598 /* Pods-AppArchitecture-umbrella.h */,
+				1A6B078CA7E5EFEB0E3A86D1E937BA13 /* Pods-AppArchitecture.debug.xcconfig */,
+				F82A3140F12F937F8CDCFA212BAF8891 /* Pods-AppArchitecture.release.xcconfig */,
+			);
+			name = "Pods-AppArchitecture";
+			path = "Target Support Files/Pods-AppArchitecture";
+			sourceTree = "<group>";
+		};
+		EF4883AA3E6C11F97F94DA5B6A9A6BA9 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				904838B4AFE774EFA7544473A9E9D977 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FE94C260F75B364F166B71B8C449770E /* CwlUtils */ = {
+			isa = PBXGroup;
+			children = (
+				9514F475A44B6751555DD5A3FAD12799 /* CwlAddressInfo.swift */,
+				903A285C383937031A5C9E2BFC151DE6 /* CwlCaseNameCodable.swift */,
+				DE4C0FE6FF69484B49A223680E9FAC66 /* CwlCollection.swift */,
+				0C1F4C699457ABB2230D9816C70C6D07 /* CwlCustomExecutionContext.swift */,
+				C6919042248116D331C8543D2CA1C442 /* CwlDebugContext.swift */,
+				FE4AC40E4A7C408C453EB50D027AFD74 /* CwlDeferredWork.swift */,
+				F32421D2FCB68AE12C416B8ECF436AD7 /* CwlDeque.swift */,
+				33AA5F734410071D111F881D5D6D5B82 /* CwlDispatch.swift */,
+				E70700DA150AE8B6FA19C9C456660FA7 /* CwlExec.swift */,
+				227DB400FCBFC7670873BB5439C7E921 /* CwlExecutionType.swift */,
+				833607137DD868974B944A73FC6F07D9 /* CwlFew.swift */,
+				594ED8943CD6B43E042437C2EB03B113 /* CwlFrameAddress.c */,
+				2B48DB835E4685EA1B9CB453BDCCD24E /* CwlFrameAddress.h */,
+				1FBA59241A6341D4189905F786F5B370 /* CwlKeyValueObserver.swift */,
+				CECD9A5CB5827F58F8B21FF11885819A /* CwlLifetime.swift */,
+				4565D62C57C12AD4850793FEAACBA750 /* CwlMutex.swift */,
+				E5548FB193DC8FCF4F81F1103565AFC7 /* CwlOnDelete.swift */,
+				5AD2EC8962645AFE2FEC547CDDF7DE16 /* CwlRandom.swift */,
+				46DCA1E8B1226B53DAFB3FC4EE336D38 /* CwlResult.swift */,
+				EC81244045853AA641A1FD4CF6448FA6 /* CwlScalarScanner.swift */,
+				822011C2730E3F8A9C360CAEACA31E03 /* CwlSerializingContext.swift */,
+				F18D5695F9E2F9015D936A201C5DFF5B /* CwlStackFrame.swift */,
+				7D69FF48EEC343E158CB366F59604426 /* CwlSysctl.swift */,
+				CEFA0C0097EF99EAF3F78AD48D7B89FB /* CwlTransformations.swift */,
+				1EBF85DB99ED51D206B3EA08666B9BE3 /* CwlUnanticipatedError.swift */,
+				BC51129558758A87BD21C21107FD1555 /* CwlUtils.h */,
+				7D59F2AA1D7D9F134FB642BF937CB56B /* CwlWrappers.swift */,
+				95CDF2091162AE77D745DE5C2DC89B2F /* Support Files */,
+			);
+			path = CwlUtils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		014BE4EDFD10E944A0D6A7F6CE76E88B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				458E498E225223E73973E25957E3A22C /* CwlFrameAddress.h in Headers */,
+				55B4A0CF7BB8571F14D32D20C07ADBCA /* CwlUtils-umbrella.h in Headers */,
+				E166674C88158B4C1FFD4B0D0AF1277B /* CwlUtils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70D824E0BF174CAEC8405D756886F3C6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CA3B6B4DA9EDD4451241B03BB3E23F6 /* Pods-AppArchitecture-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0EA4424F47DC507F3466257506D98E9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71462E7DF281FDE287ED61BBCD745800 /* CwlSignal-umbrella.h in Headers */,
+				4EBAC26C77377CE38AE83B7FAAC4D103 /* CwlSignal.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1925B36F15A1CB98C8E208B0530A6941 /* Pods-AppArchitecture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7953B18468F8E762CD619A31E8627559 /* Build configuration list for PBXNativeTarget "Pods-AppArchitecture" */;
+			buildPhases = (
+				70D824E0BF174CAEC8405D756886F3C6 /* Headers */,
+				E5D6024B70D8A5DEFEDC6C78580DA2DD /* Sources */,
+				D738C18773D2F7C7A770A87F78742215 /* Frameworks */,
+				C7E83342915D0C89C4565DCFB21DD7AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7360CCA82E21DDFFF0791CB98847B771 /* PBXTargetDependency */,
+				92A0A4D365050ADA0DB4892A31A762F9 /* PBXTargetDependency */,
+			);
+			name = "Pods-AppArchitecture";
+			productName = "Pods-AppArchitecture";
+			productReference = 1D2873FC9C691D01237D192BB1A57ED7 /* Pods_AppArchitecture.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B2F5124F997D6D80C2405EA337D6EE9F /* CwlUtils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEB8ABEA8C7A9C7CC30B2E6E32165C95 /* Build configuration list for PBXNativeTarget "CwlUtils" */;
+			buildPhases = (
+				014BE4EDFD10E944A0D6A7F6CE76E88B /* Headers */,
+				7134AAB71507C54236227A474C27AAE0 /* Sources */,
+				20DEB4F0BC5A0D6165CB174B7D4C8679 /* Frameworks */,
+				13FEDA1222CC65BC4FE525874DC1D6BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CwlUtils;
+			productName = CwlUtils;
+			productReference = 4C442633D062675B97BDC738D10B32AB /* CwlUtils.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E27EF2E8F0D7BA1CD93310CAB36A37E5 /* CwlSignal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67F22CD4B3CF9EF0F48282572433B6CF /* Build configuration list for PBXNativeTarget "CwlSignal" */;
+			buildPhases = (
+				F0EA4424F47DC507F3466257506D98E9 /* Headers */,
+				E04AD69D6EFE41852C342F6AD40EE949 /* Sources */,
+				934CD7AA3BB35375662284C58553D3B1 /* Frameworks */,
+				128A1070E47D7189231C59B93B469AEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D79FDC0371DABFE861394CC74EA69095 /* PBXTargetDependency */,
+			);
+			name = CwlSignal;
+			productName = CwlSignal;
+			productReference = E8306256C65E76F9C4275213D8B11251 /* CwlSignal.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 1020;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 392C6A55B3BFD6189DDEF1B7C1F56BB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E27EF2E8F0D7BA1CD93310CAB36A37E5 /* CwlSignal */,
+				B2F5124F997D6D80C2405EA337D6EE9F /* CwlUtils */,
+				1925B36F15A1CB98C8E208B0530A6941 /* Pods-AppArchitecture */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		128A1070E47D7189231C59B93B469AEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13FEDA1222CC65BC4FE525874DC1D6BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7E83342915D0C89C4565DCFB21DD7AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7134AAB71507C54236227A474C27AAE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46E7A1521FF0FF559FB5BB2C53671237 /* CwlAddressInfo.swift in Sources */,
+				EF50DBD177DC17E03BBF3D7DB5A4F1D5 /* CwlCaseNameCodable.swift in Sources */,
+				B317BE0614FE6DB252D2FD7F167E9D67 /* CwlCollection.swift in Sources */,
+				D824703480CD3BDA9218648AA9D23025 /* CwlCustomExecutionContext.swift in Sources */,
+				C6501DC330D06C8727BB517342F86941 /* CwlDebugContext.swift in Sources */,
+				2334FDC994A79C6568385389EA559633 /* CwlDeferredWork.swift in Sources */,
+				5CA350F3C6D8F71B51013BB956441CA0 /* CwlDeque.swift in Sources */,
+				8ACDA4A3B14AA70481132C8843F775FF /* CwlDispatch.swift in Sources */,
+				F5A9D97A1565E66C5750056AD5FAA75E /* CwlExec.swift in Sources */,
+				D4DE1DF5179152FA0CB2A7363A285986 /* CwlExecutionType.swift in Sources */,
+				81BEB927C920811811367E9B9906A1B1 /* CwlFew.swift in Sources */,
+				656875C23D947E974D6417446F0628CC /* CwlFrameAddress.c in Sources */,
+				562E843043AF22B0D544C8CBAFE4E83B /* CwlKeyValueObserver.swift in Sources */,
+				95F34C4051AA2C497C7323A73B5DCEE7 /* CwlLifetime.swift in Sources */,
+				E38B15A97572747279138E88E300BD9E /* CwlMutex.swift in Sources */,
+				D10E1D865FC583E34FBB1CA4536B49F6 /* CwlOnDelete.swift in Sources */,
+				A892B3AEB3FF1CD20D5CFED89F911FC1 /* CwlRandom.swift in Sources */,
+				5CE466368EA4B8EFF11CB05E38C602F5 /* CwlResult.swift in Sources */,
+				8F11116D264FF820FF2FD743705A8511 /* CwlScalarScanner.swift in Sources */,
+				89639C005C8978F96733699131825339 /* CwlSerializingContext.swift in Sources */,
+				D50B2C5E340710579F5B07D429757C8D /* CwlStackFrame.swift in Sources */,
+				EDE380022F28F1EE7F41064C8C8A5036 /* CwlSysctl.swift in Sources */,
+				92DF94C2823D67297F7B8B9B44D7FFA9 /* CwlTransformations.swift in Sources */,
+				337F96A39E3B2144D30D0605FADD56B6 /* CwlUnanticipatedError.swift in Sources */,
+				20044BB726CA8643534BD70911654F36 /* CwlUtils-dummy.m in Sources */,
+				D3447167A75B2759D0688B414E516EB5 /* CwlWrappers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E04AD69D6EFE41852C342F6AD40EE949 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACE4B4CB345F79CF9FD2D9581DE2F40B /* CwlSignal-dummy.m in Sources */,
+				FF940B561DA2AE5F769EDB615E6D58A6 /* CwlSignal.swift in Sources */,
+				D20A525FCBC06180B9A35DC65554D2FC /* CwlSignalChannel.swift in Sources */,
+				45320F8DF26FE40AED2422058FE131B0 /* CwlSignalCocoa.swift in Sources */,
+				915B490EE6ABB597C62DE3B4F87B4EB8 /* CwlSignalExtensions.swift in Sources */,
+				594B6A089368C96998FD3720DBFD45A2 /* CwlSignalReactive.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D6024B70D8A5DEFEDC6C78580DA2DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05039B5621D898A5AA14A649BAE2E487 /* Pods-AppArchitecture-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7360CCA82E21DDFFF0791CB98847B771 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CwlSignal;
+			target = E27EF2E8F0D7BA1CD93310CAB36A37E5 /* CwlSignal */;
+			targetProxy = 4365D7C32B0816D7276BDA63F9456196 /* PBXContainerItemProxy */;
+		};
+		92A0A4D365050ADA0DB4892A31A762F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CwlUtils;
+			target = B2F5124F997D6D80C2405EA337D6EE9F /* CwlUtils */;
+			targetProxy = F9AAE7D4A1F21BFA479853AD2B514FA9 /* PBXContainerItemProxy */;
+		};
+		D79FDC0371DABFE861394CC74EA69095 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CwlUtils;
+			target = B2F5124F997D6D80C2405EA337D6EE9F /* CwlUtils */;
+			targetProxy = 010BC726B6A03F5A6C39652EE153D9B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		135398C5D920E1E229C6468DD761B5C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D38C1FD1B7AFF7053C93B076206B196 /* CwlSignal.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CwlSignal/CwlSignal-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CwlSignal/CwlSignal-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CwlSignal/CwlSignal.modulemap";
+				PRODUCT_MODULE_NAME = CwlSignal;
+				PRODUCT_NAME = CwlSignal;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		35EE3A8DF932B25A0B6B764D4ECC5360 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4FF7E6FC480382663A188F52F6C598A /* CwlUtils.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CwlUtils/CwlUtils-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CwlUtils/CwlUtils-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CwlUtils/CwlUtils.modulemap";
+				PRODUCT_MODULE_NAME = CwlUtils;
+				PRODUCT_NAME = CwlUtils;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		491F44666BA4AC6284F25E3B9B2108C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D38C1FD1B7AFF7053C93B076206B196 /* CwlSignal.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CwlSignal/CwlSignal-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CwlSignal/CwlSignal-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CwlSignal/CwlSignal.modulemap";
+				PRODUCT_MODULE_NAME = CwlSignal;
+				PRODUCT_NAME = CwlSignal;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		52D2F867622AD25ED3E3024B96CC4B12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4FF7E6FC480382663A188F52F6C598A /* CwlUtils.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CwlUtils/CwlUtils-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CwlUtils/CwlUtils-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CwlUtils/CwlUtils.modulemap";
+				PRODUCT_MODULE_NAME = CwlUtils;
+				PRODUCT_NAME = CwlUtils;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		55661A9C53D1C3714E71BD8D3AEBA187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A6B078CA7E5EFEB0E3A86D1E937BA13 /* Pods-AppArchitecture.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AppArchitecture/Pods-AppArchitecture-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AppArchitecture/Pods-AppArchitecture.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		75EA9ED5C306BC6FDC31EFB6894142C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F82A3140F12F937F8CDCFA212BAF8891 /* Pods-AppArchitecture.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AppArchitecture/Pods-AppArchitecture-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AppArchitecture/Pods-AppArchitecture.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AB4D69770D8ACE3A05E80BB3502666F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F232B5ECA11A71BFA199A229B323F454 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB4D69770D8ACE3A05E80BB3502666F6 /* Debug */,
+				F232B5ECA11A71BFA199A229B323F454 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67F22CD4B3CF9EF0F48282572433B6CF /* Build configuration list for PBXNativeTarget "CwlSignal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				135398C5D920E1E229C6468DD761B5C1 /* Debug */,
+				491F44666BA4AC6284F25E3B9B2108C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7953B18468F8E762CD619A31E8627559 /* Build configuration list for PBXNativeTarget "Pods-AppArchitecture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55661A9C53D1C3714E71BD8D3AEBA187 /* Debug */,
+				75EA9ED5C306BC6FDC31EFB6894142C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEB8ABEA8C7A9C7CC30B2E6E32165C95 /* Build configuration list for PBXNativeTarget "CwlUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52D2F867622AD25ED3E3024B96CC4B12 /* Debug */,
+				35EE3A8DF932B25A0B6B764D4ECC5360 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

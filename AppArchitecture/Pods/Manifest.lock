@@ -1,0 +1,30 @@
+PODS:
+  - CwlSignal (2.1.0):
+    - CwlUtils
+  - CwlUtils (2.1.0)
+
+DEPENDENCIES:
+  - CwlSignal (from `https://github.com/mattgallagher/CwlSignal.git`)
+  - CwlUtils (from `https://github.com/mattgallagher/CwlUtils.git`)
+
+EXTERNAL SOURCES:
+  CwlSignal:
+    :git: https://github.com/mattgallagher/CwlSignal.git
+  CwlUtils:
+    :git: https://github.com/mattgallagher/CwlUtils.git
+
+CHECKOUT OPTIONS:
+  CwlSignal:
+    :commit: 1a3ff987beff0a1d60acc12fa739ba7fde46fbdc
+    :git: https://github.com/mattgallagher/CwlSignal.git
+  CwlUtils:
+    :commit: e4186dae4ba55ffa478264c8477d01a48fd2b459
+    :git: https://github.com/mattgallagher/CwlUtils.git
+
+SPEC CHECKSUMS:
+  CwlSignal: 9046b5372f8a04cb90de91a7c609daa426868e85
+  CwlUtils: 11e59c5a37b8f9e5d32b400d38554ba3eb7427fe
+
+PODFILE CHECKSUM: 2a4784ee1964edd18b93e5be29de1406d2a73c94
+
+COCOAPODS: 1.6.1
