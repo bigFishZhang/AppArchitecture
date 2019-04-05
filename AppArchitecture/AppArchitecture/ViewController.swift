@@ -39,8 +39,14 @@ class ViewController: UIViewController,UITextFieldDelegate {
     var minimalObserver:NSObjectProtocol?
     var viewModel:ViewModel?
     var mvvmObserver:Cancellable? //单一的观察者 和RxSwift 中的 Disposable 一样的概念
+    var viewState:ViewState?
+    var viewStateObserver :NSObjectProtocol?
+    var viewStateModelObserver :NSObjectProtocol?
+    var driver : Driver<ElmState,ElmState.Action>?
+    //viewStateadapter
+//    var viewStateAdaptet :Var<String>!
     
-    
+    var cleanPresenter: CleanPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +62,13 @@ class ViewController: UIViewController,UITextFieldDelegate {
         
         mvvmDidLoad()
         
+        mvcvsDidLoad()
+        
+        elmDidLoad()
+        
+//        mavbDidLoad()
+        
+        cleanDidLoad()
 
     }
     
@@ -185,7 +198,7 @@ extension ViewController {
     }
     
     @IBAction func  mvvmmButtonPressed() {
-        print("mvvmmButtonPressed")
+       print("mvvmmButtonPressed")
        minimalViewModel?.commit(value: mvvmmTextField.text ?? "")
     }
 }
@@ -231,26 +244,180 @@ extension ViewController {
 }
 
 // ------------------------------------------  MVC+VS ------------------------------------------------
+
+class ViewState {
+    var textFieldValue:String = ""
+    
+    init(textFieldValue:String) {
+        self.textFieldValue = textFieldValue
+        
+    }
+    
+}
+
+
+
 extension ViewController {
+    func mvcvsDidLoad() {
+        viewState = ViewState(textFieldValue:model.value)
+        mvcvsTextField.text = model.value
+        //实时监听 mvcvsTextField的属性存储到 viewState
+        viewStateObserver = NotificationCenter.default.addObserver(forName:UITextField.textDidChangeNotification, object: mvcvsTextField, queue: nil, using: { [viewState] (note) in
+            viewState?.textFieldValue = (note.object as! UITextField).text ?? ""
+        })
+        //model 的值监听传来viewController 再 赋值给view
+        viewStateModelObserver = NotificationCenter.default.addObserver(forName: Model.textDidChange, object: nil, queue: nil, using: { [mvcvsTextField] (note) in
+            mvcvsTextField?.text = note.userInfo?[Model.textKey] as? String
+        })
+    }
+    
+    //事件点击的时候 把viewState存储的值传递到 model
     @IBAction func mvcvsButtonPressed() {
-         print("mvcvsButtonPressed")
+        print("mvcvsButtonPressed")
+        model.value = viewState?.textFieldValue ?? ""
     }
 }
 
 
-// ------------------------------------------  TEA ------------------------------------------------
+// ------------------------------------------  Elm ------------------------------------------------
+
+struct ElmState {
+    var text:String
+    enum Action {
+        case commit
+        case setText(String)
+        case modelNotification(Notification)
+    }
+    
+    mutating func update(_ action:Action) ->Command<Action>? {
+        switch action {
+            case .commit:
+                return Command.changeModelText(text)
+            case .setText(let text):
+                self.text = text
+                return nil
+            case .modelNotification(let note):
+                text = note.userInfo?[Model.textKey] as? String ?? ""
+                return nil
+        }
+        
+    }
+    
+    var view: [ElmView<Action>] {
+        return [
+            ElmView.textField(text, onChange: Action.setText),
+            ElmView.button(title: "Commit", onTap: Action.commit)
+        ]
+    }
+    //subscriptions
+    var subscriptions: [Subscription<Action>] {
+        return [
+            .notification(name: Model.textDidChange, Action.modelNotification)
+        ]
+    }
+
+}
+
 extension ViewController {
+    func elmDidLoad() {
+        driver = Driver.init(ElmState(text: model.value), update: { state, action in
+            state.update(action)
+        }, view: { $0.view }, subscriptions: { $0.subscriptions }, rootView: stackView, model: model)
+    
+    }
+    
     
 }
 
 // ------------------------------------------  MAVB ------------------------------------------------
+//暂时不做 直接绑定view 和model
 extension ViewController {
+    func mavbDidLoad() {
+        
+        
+    }
+    
+    
    
 }
 
 // ------------------------------------------  Clean ------------------------------------------------
-extension ViewController {
+protocol CleanPresenterProtocol: class {
+    var textFieldValue: String { get set }
+}
+
+
+class CleanUseCase {
+    let model: Model
+    var modelValue: String {
+        get {
+            return model.value
+        }
+        set {
+            model.value = newValue
+        }
+    }
+    weak var presenter: CleanPresenterProtocol?
+    var observer: NSObjectProtocol?
+    init(model: Model) {
+        self.model = model
+        observer = NotificationCenter.default.addObserver(forName: Model.textDidChange, object: nil, queue: nil, using: { [weak self] n in
+            self?.presenter?.textFieldValue = n.userInfo?[Model.textKey] as? String ?? ""
+        })
+    }
+}
+
+
+protocol CleanViewProtocol: class {
+    var cleanTextFieldValue: String { get set }
+}
+
+class CleanPresenter: CleanPresenterProtocol {
+    let useCase: CleanUseCase
+    weak var view: CleanViewProtocol? {
+        didSet {
+            if let v = view {
+                v.cleanTextFieldValue = textFieldValue
+            }
+        }
+    }
+    init(useCase: CleanUseCase) {
+        self.useCase = useCase
+        self.textFieldValue = useCase.modelValue
+        useCase.presenter = self
+        
+    }
+    
+    var textFieldValue: String {
+        didSet {
+            view?.cleanTextFieldValue = textFieldValue
+        }
+    }
+    
+    func commit() {
+        useCase.modelValue = view?.cleanTextFieldValue ?? ""
+    }
+}
+
+
+
+
+extension ViewController: CleanViewProtocol {
+    var cleanTextFieldValue: String {
+        get {
+            return cleanTextField.text ?? ""
+        }
+        set {
+            cleanTextField.text = newValue
+        }
+    }
+    func cleanDidLoad() {
+        let useCase = CleanUseCase(model: model)
+        cleanPresenter = CleanPresenter(useCase: useCase)
+        cleanPresenter.view = self
+    }
+    
     @IBAction func  cleanButtonPressed() {
-        print("cleanButtonPressed")
+        cleanPresenter.commit()
     }
 }
