@@ -348,7 +348,9 @@ protocol CleanPresenterProtocol: class {
 
 
 class CleanUseCase {
+    
     let model: Model
+    
     var modelValue: String {
         get {
             return model.value
@@ -357,10 +359,16 @@ class CleanUseCase {
             model.value = newValue
         }
     }
+    
     weak var presenter: CleanPresenterProtocol?
+    
     var observer: NSObjectProtocol?
+    
     init(model: Model) {
+        // use case 持有model
+        
         self.model = model
+        // model的变化通知到 use case  usecase 传给 presenter
         observer = NotificationCenter.default.addObserver(forName: Model.textDidChange, object: nil, queue: nil, using: { [weak self] n in
             self?.presenter?.textFieldValue = n.userInfo?[Model.textKey] as? String ?? ""
         })
@@ -369,31 +377,43 @@ class CleanUseCase {
 
 
 protocol CleanViewProtocol: class {
+    
     var cleanTextFieldValue: String { get set }
 }
 
+
 class CleanPresenter: CleanPresenterProtocol {
+    
     let useCase: CleanUseCase
+    //持有view
     weak var view: CleanViewProtocol? {
         didSet {
             if let v = view {
+                //model -> use case -> presenter -> view
                 v.cleanTextFieldValue = textFieldValue
             }
         }
     }
+    
     init(useCase: CleanUseCase) {
+        
+        //持有use cese
         self.useCase = useCase
+        
         self.textFieldValue = useCase.modelValue
+        
+        //self 的presenter
         useCase.presenter = self
         
     }
     
     var textFieldValue: String {
         didSet {
+            //传值给 view
             view?.cleanTextFieldValue = textFieldValue
         }
     }
-    
+    //传值给 use case
     func commit() {
         useCase.modelValue = view?.cleanTextFieldValue ?? ""
     }
@@ -403,6 +423,7 @@ class CleanPresenter: CleanPresenterProtocol {
 
 
 extension ViewController: CleanViewProtocol {
+   
     var cleanTextFieldValue: String {
         get {
             return cleanTextField.text ?? ""
@@ -411,9 +432,16 @@ extension ViewController: CleanViewProtocol {
             cleanTextField.text = newValue
         }
     }
+    // controller 持有 view 持有 usecase 持有 presenter
+    
     func cleanDidLoad() {
+        //初始化use case
         let useCase = CleanUseCase(model: model)
+        
+        //传给 presenter
         cleanPresenter = CleanPresenter(useCase: useCase)
+        
+        //presenter 持有 view
         cleanPresenter.view = self
     }
     
